@@ -1,5 +1,49 @@
 # Training_PieQ
 
+```
+import kotlin.random.Random
+fun main() {
+    val arr=IntArray(50)
+    for(i in 0..49){
+        arr[i]=Random.nextInt(1,1001)
+    }
+    print("Initial Array:")
+    for(i in 0..49){
+
+        print("${arr[i]} ")
+    }
+    println()
+    println(arr.size)
+    val list=arr.toMutableList()
+    val randArr=mutableListOf<Int>()
+    for(i in 0..24){
+        val num=Random.nextInt(0,50)
+        list[num]=-1
+        randArr.add(num)
+
+    }
+    val res=mutableListOf<Int>()
+    for(num in list){
+        if(num!=-1) res.add(num)
+    }
+    println("After deletion : ${res}")
+    println(res.size)
+    println("Deleted Index: ${randArr.sorted()}")
+}
+```
+
+<img width="1911" height="643" alt="image" src="https://github.com/user-attachments/assets/93217a5c-0d0b-418f-bd4b-0024e03d5f94" />
+
+
+
+
+
+
+
+
+21/07/2025
+
+
 OOPS Feature :
 
 Class - It defines the variables and the methods which is common to all the objects instantiated from it.
